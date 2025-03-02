@@ -10,11 +10,11 @@ const ChatList = () => {
   if (!chats) return <div>No chats available</div>; // Optionally show a message if chats is undefined
 
   return (
-    <div className="w-1/3 p-4 bg-gray-100">
+    <div className="w-1/3 p-4 bg-gray-700">
       {chats.map((chat) => (
         <div
           key={chat.id}
-          className="p-3 cursor-pointer hover:bg-gray-200"
+          className="p-3 cursor-pointer bg-gray-700 hover:bg-gray-200"
           onClick={() => dispatch(setActiveChat(chat))}
         >
           {chat.name}

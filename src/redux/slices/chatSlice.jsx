@@ -1,26 +1,24 @@
+// src/redux/slices/chatSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  chats: [],
+  chats: [], // Ensure chats is initialized as an empty array or some default value
   activeChat: null,
-  messages: [],
 };
 
 const chatSlice = createSlice({
   name: "chat",
   initialState,
   reducers: {
-    setChats: (state, action) => {
-      state.chats = action.payload;
-    },
     setActiveChat: (state, action) => {
       state.activeChat = action.payload;
     },
-    setMessages: (state, action) => {
-      state.messages = action.payload;
+    setChats: (state, action) => {
+      state.chats = action.payload;
     },
   },
 });
 
-export const { setChats, setActiveChat, setMessages } = chatSlice.actions;
+export const { setActiveChat, setChats } = chatSlice.actions;
+
 export default chatSlice.reducer;
