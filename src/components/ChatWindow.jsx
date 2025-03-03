@@ -9,7 +9,21 @@ const ChatWindow = () => {
   return (
     <div className="w-2/3 p-4">
       <h2 className="text-xl">{activeChat.name}</h2>
-      <div className="mt-4">Messages go here...</div>
+
+      {/* Render messages if activeChat has messages */}
+      <div className="mt-4">
+        {activeChat.messages.length > 0 ? (
+          <div>
+            {activeChat.messages.map((message, index) => (
+              <div key={index} className="p-2 my-2 bg-gray-200 rounded">
+                <p>{message.text}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div>No messages yet...</div>
+        )}
+      </div>
     </div>
   );
 };
