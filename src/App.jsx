@@ -1,14 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
+import React from "react";
+import Chat from "./components/Chat";
 
-function App() {
+const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-    </Routes>
+    <div className="h-screen flex items-center justify-center bg-gray-200">
+      <Chat />
+    </div>
   );
-}
+};
 
 export default App;
