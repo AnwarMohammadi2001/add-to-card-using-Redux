@@ -7,6 +7,7 @@ import ProductPage from "./pages/ProductPage";
 
 const App = () => {
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>

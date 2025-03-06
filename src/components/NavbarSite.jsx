@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { useSelector } from "react-redux";
 
 const NavbarSite = () => {
+  const cardProducts = useSelector((state) => state.card);
   return (
     <Navbar expand="lg" className="bg-slate-900 h-[70px]" sticky="top">
       <Container fluid>
@@ -27,7 +29,7 @@ const NavbarSite = () => {
               borderRadius: "5px",
             }}
           >
-            Card Items
+            Card Items {cardProducts.length}
           </Nav.Link>
         </Navbar.Collapse>
       </Container>
