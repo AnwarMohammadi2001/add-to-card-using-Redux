@@ -1,12 +1,12 @@
 import React from "react";
-import Chat from "./components/Chat";
+import Counter from "./components/Counter";
 
-const App = () => {
+function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-200">
-      <Chat />
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <Counter />
     </div>
   );
-};
+}
 
 export default App;
