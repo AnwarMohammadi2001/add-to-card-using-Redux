@@ -14,10 +14,14 @@ const ProductPage = () => {
     dispatch(getProducts());
   }, [dispatch]); // Added dependency
   if (status === StatusCode.LOADING) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className=" flex justify-center items-center ">
+        <div className="loader mt-10"></div>
+      </div>
+    );
   }
   if (status === StatusCode.ERROR) {
-    return <h1>Error  </h1>;
+    return <h1>Error </h1>;
   }
 
   const addToCart = (product) => {
@@ -48,7 +52,7 @@ const ProductPage = () => {
                 </Card.Title>
                 <Card.Text>${product.price}</Card.Text>
               </Card.Body>
-              <Card.Footer className="text-center">
+              <Card.Footer className="text-center bg-gray-900">
                 <Button onClick={() => addToCart(product)} variant="primary">
                   Add to Cart
                 </Button>
