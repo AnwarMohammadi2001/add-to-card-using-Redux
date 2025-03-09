@@ -17,6 +17,7 @@ const initialState = {
 const productsSlice = createSlice({
   name: "products",
   initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getProducts.pending, (state, action) => {
